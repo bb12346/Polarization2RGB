@@ -1,4 +1,4 @@
-# Polarization2RGB
+# RGB-to-Polarization Estimation: A New Task and Benchmark Study
 
 
 Download Dataset
