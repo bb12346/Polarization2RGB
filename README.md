@@ -19,25 +19,20 @@ Please download the dataset from the Hugging Face repository: https://huggingfac
 
 The dataset should follow the structure below:
 
+```
 <root_dir>/
 ├── 0000/
 │   ├── s0.png
 │   ├── s1.png
 │   ├── s2.png
 │   └── s3.png 
-
 ├── 0001/
-
 │   ├── s0.png
-
 │   ├── s1.png
-
 │   ├── s2.png
-
 │   └── s3.png
-
 ├── ...
-
+```
 Training
 ---------------
 To train our model:
