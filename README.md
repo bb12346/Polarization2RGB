@@ -15,22 +15,31 @@ Dataset reference:
   year      = {2024}
 }
 
-Please download the dataset from the Hugging Face repository:  
-https://huggingface.co/datasets/jyj7913/spectro-polarimetric
+Please download the dataset from the Hugging Face repository: https://huggingface.co/datasets/jyj7913/spectro-polarimetric
 
 The dataset should follow the structure below:
 
 <root_dir>/
 ├── 0000/
+
 │   ├── s0.png
+
 │   ├── s1.png
+
 │   ├── s2.png
+
 │   └── s3.png 
+
 ├── 0001/
+
 │   ├── s0.png
+
 │   ├── s1.png
+
 │   ├── s2.png
+
 │   └── s3.png
+
 ├── ...
 
 Training
