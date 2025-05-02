@@ -1,0 +1,70 @@
+data:
+    dataset: "polarization"
+    # image_size: 224 #MAE
+    # stride: 2
+
+    # image_size: 128 #Restormer
+    # stride: 8
+
+    # image_size: 256 #Uformer
+    # stride: 8
+
+    # image_size: 64 #DiT
+    # stride: 8
+    # step: 25
+
+    image_size: 64 #unet
+    stride: 8
+    step: 25
+
+    channels: 3
+    num_workers: 1
+    data_dir: "./stokes_images"
+    conditional: True
+    
+
+model:
+    ddp: False
+    load_memory: False
+
+    ema_rate: 0.999
+    ema: True
+
+
+diffusion:
+    beta_schedule: linear
+    beta_start: 0.0001
+    beta_end: 0.02
+    num_diffusion_timesteps: 1000
+
+training:
+
+    #ddp
+    # patch_n: 1
+    # batch_size: 12 #uformer
+    # batch_size: 4 #restormer
+    # batch_size: 32 #MAE
+
+    # dp 
+    # patch_n: 16 #DiT
+    # batch_size: 16 #DiT
+
+    patch_n: 2 #Unet
+    batch_size: 64 #Unet
+
+    n_epochs: 100000
+    n_iters: 150000
+    snapshot_freq: 1000
+    validation_freq: 1000
+
+sampling:
+    batch_size: 1
+    last_only: True
+
+optim:
+    weight_decay: 0.000
+    optimizer: "Adam"
+    # lr: 0.00002
+    lr: 0.00015
+    amsgrad: False
+    eps: 0.00000001
